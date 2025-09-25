@@ -19,7 +19,6 @@ export default function Hero() {
       <video
         autoPlay
         muted
-        playsInline
         preload="auto"
         className="absolute z-0 w-full h-full object-cover"
       >
