@@ -50,3 +50,27 @@ body {
     0 0
   );
 }
+
+.box {
+  position: relative;
+}
+.box:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-button-active);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 140px),
+    calc(100% - 140px) 100%,
+    0 100%,
+    0 0,
+    10px 10px,
+    10px calc(100% - 10px),
+    calc(100% - 140px - 4.14px) calc(100% - 10px),
+    calc(100% - 10px) calc(100% - 140px - 4.14px),
+    calc(100% - 10px) 10px,
+    10px 10px
+  );
+}
