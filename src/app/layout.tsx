@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero/Hero";
+import Footer from "./components/Footer/Footer";
 
 const ClashDisplay = localFont({
   src: "./font/ClashDisplay-Medium.otf",
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Navbar />
         <Hero />
         {children}
+        <Footer />
       </body>
     </html>
   );

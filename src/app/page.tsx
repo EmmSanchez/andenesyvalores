@@ -1,10 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
-import CarouselContent from "./components/Carousel/CarouselContent";
-import CarouselControls from "./components/Carousel/CarouselControls";
 import HomePortafolio from "./components/home/HomePortfolio";
 import LinkButton from "./components/common/LinkButton";
 import HomePartners from "./components/home/HomePartners";
+import HomeServices from "./components/home/HomeServices";
+import ContactForm from "./components/common/ContactForm";
 
 export default function Home() {
   return (
@@ -68,75 +67,7 @@ export default function Home() {
       </section>
 
       {/* Servicios */}
-      <section className="w-full flex justify-center items-center bg-background-3">
-        <div className="flex flex-col justify-center items-center w-7xl h-[492px] px-[80px] py-[50px] gap-[30px]">
-          <h2 className="flex gap-[30px] text-[64px] text-title-3 leading-[95%] tracking-wide">
-            Nuestros{" "}
-            <span className="text-title-4 font-semibold">Servicios</span>
-          </h2>
-
-          <div className="flex flex-row gap-[15px]">
-            <div className="flex justify-center items-center gap-[15px] px-2.5 py-[30px] bg-background-2/70">
-              <div className="flex flex-col justify-center items-center gap-2.5">
-                <Image
-                  src={"/icons/Home/servicio-1.svg"}
-                  width={69}
-                  height={60}
-                  alt="Ícono del primer servicio"
-                />
-                <p className="w-[248px] text-[24px] leading-[111%] font-semibold text-center text-paragragraph-2">
-                  Comercialización y arrendamiento de propiedades
-                </p>
-              </div>
-            </div>
-            <div className="flex justify-center items-center gap-[15px] px-2.5 py-[30px] bg-background-2/70">
-              <div className="flex flex-col justify-center items-center gap-2.5">
-                <Image
-                  src={"/icons/Home/servicio-1.svg"}
-                  width={69}
-                  height={60}
-                  alt="Ícono del primer servicio"
-                />
-                <p className="w-[248px] text-[24px] leading-[111%] font-semibold text-center text-paragragraph-2">
-                  Comercialización y arrendamiento de propiedades
-                </p>
-              </div>
-            </div>
-            <div className="flex justify-center items-center gap-[15px] px-2.5 py-[30px] bg-background-2/70">
-              <div className="flex flex-col justify-center items-center gap-2.5">
-                <Image
-                  src={"/icons/Home/servicio-1.svg"}
-                  width={69}
-                  height={60}
-                  alt="Ícono del primer servicio"
-                />
-                <p className="w-[248px] text-[24px] leading-[111%] font-semibold text-center text-paragragraph-2">
-                  Comercialización y arrendamiento de propiedades
-                </p>
-              </div>
-            </div>
-            <div className="flex justify-center items-center gap-[15px] px-2.5 py-[30px] bg-background-2/70">
-              <div className="flex flex-col justify-center items-center gap-2.5">
-                <Image
-                  src={"/icons/Home/servicio-1.svg"}
-                  width={69}
-                  height={60}
-                  alt="Ícono del primer servicio"
-                />
-                <p className="w-[248px] text-[24px] leading-[111%] font-semibold text-center text-paragragraph-2">
-                  Comercialización y arrendamiento de propiedades
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <LinkButton
-            title="Ver más"
-            href="/servicios"
-            className="w-[175px] h-[45px]"
-          />
-        </div>
-      </section>
+      <HomeServices />
 
       {/* Portafolio */}
       <HomePortafolio />
@@ -182,7 +113,6 @@ export default function Home() {
             <span className="text-title-4 font-semibold">Contáctanos</span>
           </h2>
 
-          {/* Formulario */}
           <div className="w-[1280px] h-[463px] flex justify-center items-center gap-[15px]">
             <div className="w-[456.2px] h-[453.52] box p-5">
               <h3 className="w-full h-full pt-16 flex flex-col text-[64px] text-right font-bold tracking-wide leading-[105%] text-title-2">
@@ -192,10 +122,7 @@ export default function Home() {
               </h3>
             </div>
 
-            <form action="" className="bg-green-200 w-[747px] h-[463px]">
-              <label htmlFor="">Nombre</label>
-              <input type="text" className="w-full h-14 bg-background-1" />
-            </form>
+            <ContactForm />
           </div>
         </div>
       </section>
