@@ -3,11 +3,26 @@ import HomePortafolio from "./components/home/HomePortfolio";
 import LinkButton from "./components/common/LinkButton";
 import HomePartners from "./components/home/HomePartners";
 import HomeServices from "./components/home/HomeServices";
-import ContactForm from "./components/common/ContactForm";
+import HomeContact from "./components/home/HomeContact";
+import Hero from "./components/Hero/Hero";
+import { VIDEOS } from "./constants/videos";
 
 export default function Home() {
   return (
     <main className="w-full flex flex-col justify-center items-center overflow-hidden">
+      <Hero video={VIDEOS.HOME}>
+        <Image
+          src={"/logos/main/andenesyvalores-blue-3x.svg"}
+          alt="Andenes y Valores Logo"
+          width={532}
+          height={82.5}
+        />
+        <h1 className="sr-only">Andenes y Valores</h1>
+        <p className="w-[1120px] text-title-3 text-[40px] font-medium leading-[109%] text-pretty">
+          Desarrollamos espacios inmobiliarios que impulsan el crecimiento de
+          nuestros clientes y comunidades.
+        </p>
+      </Hero>
       {/* Mision y Visión */}
       <section className="flex flex-col justify-center items-center w-7xl px-[80px] py-[50px] gap-[30px]">
         <h2 className="text-[64px] leading-[95%] text-title-3">
@@ -106,26 +121,7 @@ export default function Home() {
       <HomePartners />
 
       {/* Contactanos */}
-      <section className="w-full h-[715px] flex flex-col justify-center items-center bg-background-2">
-        <div className="w-[1280px] flex flex-col justify-center items-center gap-[30px] py-[50px]">
-          <h2 className="w-[1180px] h-[122px] flex flex-col text-[64px] text-center tracking-wide leading-[105%] text-title-2">
-            Tu historia merece ser contada{" "}
-            <span className="text-title-4 font-semibold">Contáctanos</span>
-          </h2>
-
-          <div className="w-[1280px] h-[463px] flex justify-center items-center gap-[15px]">
-            <div className="w-[456.2px] h-[453.52] box p-5">
-              <h3 className="w-full h-full pt-16 flex flex-col text-[64px] text-right font-bold tracking-wide leading-[105%] text-title-2">
-                <span className="text-title-4">JUNTOS</span>
-                CREAMOS
-                <span className="text-title-4">FUTUROS.</span>
-              </h3>
-            </div>
-
-            <ContactForm />
-          </div>
-        </div>
-      </section>
+      <HomeContact />
     </main>
   );
 }

@@ -23,7 +23,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${ClashDisplay.className} antialiased`}>
         <Navbar />
-        <Hero />
         {children}
         <Footer />
       </body>
